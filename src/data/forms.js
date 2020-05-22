@@ -1,5 +1,5 @@
-export const formData = [{
-  "name": "Test form",
+export const FORM_DATA = [{
+  "name": "Test form1",
   "description": "Uye bilgi formu",
   "createdAt": "2017-01-08",
   "fields": [
@@ -9,7 +9,7 @@ export const formData = [{
   ]
 },
 {
-  "name": "Test form",
+  "name": "test form2",
   "description": "Uye bilgi formu",
   "createdAt": "2017-01-08",
   "fields": [
@@ -19,7 +19,7 @@ export const formData = [{
   ]
 },
 {
-  "name": "Test form",
+  "name": "anket",
   "description": "Uye bilgi formu",
   "createdAt": "2017-01-08",
   "fields": [
@@ -29,7 +29,7 @@ export const formData = [{
   ]
 },
 {
-  "name": "Test form",
+  "name": "kayıt formu",
   "description": "Uye bilgi formu",
   "createdAt": "2017-01-08",
   "fields": [
@@ -39,7 +39,7 @@ export const formData = [{
   ]
 },
 {
-  "name": "Test form",
+  "name": "üyelik formu",
   "description": "Uye bilgi formu",
   "createdAt": "2017-01-08",
   "fields": [
@@ -49,7 +49,7 @@ export const formData = [{
   ]
 },
 {
-  "name": "Test form",
+  "name": "deneme formu",
   "description": "Uye bilgi formu",
   "createdAt": "2017-01-08",
   "fields": [
@@ -58,3 +58,4 @@ export const formData = [{
     { "required": false, "name": "Yaş", "dataType": "NUMBER" }
   ]
 }]
+
