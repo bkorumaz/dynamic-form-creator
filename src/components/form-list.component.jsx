@@ -2,7 +2,7 @@ import React from "react";
 import { ListGroup } from "react-bootstrap";
 
 export default function FormList({ forms, searchField }) {
-  const filteredForms = forms.filter((form) =>
+  const filteredForms = forms.formList.filter((form) =>
     form.name.toLowerCase().includes(searchField.toLowerCase())
   );
 

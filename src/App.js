@@ -3,11 +3,14 @@ import "./App.css";
 import { Button } from "react-bootstrap";
 import SearchBox from "./components/search-box.component";
 import FormList from "./components/form-list.component";
-import { FORM_DATA } from "./data/forms";
+import { useSelector, useDispatch } from 'react-redux';
+import { createForm } from './redux/root-reducer'
 
 function App() {
   const [searchField, setSearchField] = useState("");
-  const [forms, setForms] = useState(FORM_DATA);
+  const forms = useSelector(state => state.formList);
+
+  const dispatch = useDispatch();
 
   const handleChange = (input) => {
     setSearchField(input.target.value);
@@ -31,7 +34,7 @@ function App() {
               </div>
               <FormList forms={forms} searchField={searchField} />
               <div className="card-footer">
-                <Button variant="btn btn-primary" onClick={() => setForms([...forms, {name: "new form"}])}>Yeni Form Oluştur</Button>
+                <Button variant="btn btn-primary" onClick={() => dispatch(createForm({name: "new form"}))}>Yeni Form Oluştur</Button>
               </div>
             </div>
           </div>
