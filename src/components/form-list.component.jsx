@@ -9,7 +9,7 @@ export default function FormList({ forms, searchField }) {
   return (
     <ListGroup>
       {filteredForms.map((form) => (
-        <ListGroup.Item action href={`#${encodeURI(form.name.toLowerCase())}`}>
+        <ListGroup.Item key={form.name} action href={`#${encodeURI(form.name.toLowerCase())}`}>
           {form.name}
         </ListGroup.Item>
       ))}
