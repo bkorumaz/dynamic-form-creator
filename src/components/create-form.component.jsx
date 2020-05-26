@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createForm } from "../redux/root-reducer";
-import { Modal, Col, Form, Container, Row, Button } from "react-bootstrap";
+import { Modal, Form, Button } from "react-bootstrap";
 
 function CreateFormModal(props) {
   const dispatch = useDispatch();
@@ -71,7 +71,7 @@ function CreateFormModal(props) {
               onChange={(event) =>
                 setFormData({
                   ...formData,
-                  fields: event.target.value,
+                  fields: JSON.parse(event.target.value),
                 })
               }
             />
@@ -79,7 +79,7 @@ function CreateFormModal(props) {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" type="submit">
-            Oluştur
+            Kaydet
           </Button>
           <Button onClick={props.onHide}>Kapat</Button>
         </Modal.Footer>

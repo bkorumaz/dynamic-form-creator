@@ -1,9 +1,10 @@
 import React from "react";
 import { ListGroup } from "react-bootstrap";
 import { useSelector } from "react-redux";
+import {withRouter} from 'react-router-dom'
 
 
-export default function FormList({ searchField }) {
+function FormList({ searchField, history }) {
   const forms = useSelector((state) => state.formList);
 
   const filteredForms = forms.formList.filter((form) =>
@@ -16,7 +17,7 @@ export default function FormList({ searchField }) {
         <ListGroup.Item
           key={form.name}
           action
-          href={`#${encodeURI(form.name.toLowerCase())}`}
+          onClick={() => history.push(`/form/${encodeURI(form.name.toLowerCase())}`)}
         >
           {form.name}
         </ListGroup.Item>
@@ -24,3 +25,5 @@ export default function FormList({ searchField }) {
     </ListGroup>
   );
 }
+
+export default withRouter(FormList);

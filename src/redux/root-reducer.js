@@ -3,6 +3,7 @@ import { FormListActions } from "./form-list.actions";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { FORM_DATA } from "../data/forms";
+import transformFormsData from "../utils/form-data.util";
 
 const persistConfig = {
   key: 'root',
@@ -28,6 +29,7 @@ const formReducer = (state = FORM_DATA, action) => {
       return state;
   }
 };
+
 
 // COMBINE REDUCERS
 const rootReducer = combineReducers({
