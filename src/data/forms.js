@@ -1,3 +1,12 @@
+export const EMPTY_FORM = {
+  name: "",
+  description: "",
+  createdAt: Date(),
+  fields: [
+    { required: true, name: "Form Field", dataType: "STRING", id: 0}
+  ],
+};
+
 export const FORM_DATA = { formList: [{
   "name": "Test form1",
   "description": "Uye bilgi formu",

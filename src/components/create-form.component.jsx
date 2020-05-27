@@ -1,27 +1,38 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createForm } from "../redux/root-reducer";
+import { createForm } from "../redux/form.actions";
+import FormField from "./form-field.component";
 import { Modal, Form, Button } from "react-bootstrap";
+import { EMPTY_FORM } from "../data/forms";
 
 function CreateFormModal(props) {
   const dispatch = useDispatch();
 
-  const [formData, setFormData] = useState({
-    name: "",
-    description: "",
-    createdAt: Date(),
-    fields: [
-      { required: true, name: "Ad", dataType: "STRING" },
-      { required: true, name: "Soyad", dataType: "STRING" },
-      { required: false, name: "Yaş", dataType: "NUMBER" },
-    ],
-  });
+  const [formData, setFormData] = useState(EMPTY_FORM);
 
   const handleSubmit = (event) => {
     console.log(formData);
     dispatch(createForm(formData));
     props.onHide();
     event.preventDefault();
+  };
+
+  const handleDeleteField = (id) => {
+    setFormData({
+      ...formData,
+      fields: formData.fields.filter((field) => field.id !== id),
+    });
+  };
+
+  const handleFieldChange = (field) => {
+    let fields = formData.fields;
+    const foundIndex = fields.findIndex((x) => x.id === field.id);
+    fields[foundIndex] = field;
+
+    setFormData({
+      ...formData,
+      fields: fields,
+    });
   };
 
   return (
@@ -41,10 +52,10 @@ function CreateFormModal(props) {
       <Form onSubmit={handleSubmit}>
         <Modal.Body>
           <Form.Group controlId="formGridName">
-            <Form.Label>Adı</Form.Label>
+            <Form.Label>Form Adı:</Form.Label>
             <Form.Control
-              placeholder="Test form"
               value={formData.name}
+              required
               onChange={(event) =>
                 setFormData({ ...formData, name: event.target.value })
               }
@@ -54,7 +65,6 @@ function CreateFormModal(props) {
           <Form.Group controlId="formGridDescription">
             <Form.Label>Açıklama:</Form.Label>
             <Form.Control
-              placeholder="Uye bilgi formu"
               value={formData.description}
               onChange={(event) =>
                 setFormData({ ...formData, description: event.target.value })
@@ -64,18 +74,34 @@ function CreateFormModal(props) {
 
           <Form.Group controlId="newForm.Feilds">
             <Form.Label>Alanlar:</Form.Label>
-            <Form.Control
-              as="textarea"
-              rows="3"
-              value={JSON.stringify(formData.fields)}
-              onChange={(event) =>
+            {formData.fields.map((field) => (
+              <FormField
+                fieldData={field}
+                onDelete={handleDeleteField}
+                handleChange={handleFieldChange}
+              />
+            ))}
+          </Form.Group>
+
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Button
+              onClick={() =>
                 setFormData({
                   ...formData,
-                  fields: JSON.parse(event.target.value),
+                  fields: [
+                    ...formData.fields,
+                    {
+                      ...EMPTY_FORM,
+                      id: formData.fields.length,
+                    },
+                  ],
                 })
               }
-            />
-          </Form.Group>
+            >
+              Alan Ekle
+            </Button>
+          </div>
+          
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" type="submit">
