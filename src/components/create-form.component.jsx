@@ -15,6 +15,8 @@ function CreateFormModal(props) {
     fields: [{ required: true, name: "", dataType: "STRING", id: 0}],
   });
 
+  const [fieldIdCounter, setFieldIdCounter] = useState(1);
+
   const handleSubmit = (event) => {
     dispatch(createForm(formData));
     props.onHide();
@@ -32,8 +34,14 @@ function CreateFormModal(props) {
     setFormData({...formData, fields: fields});
   };
 
+  const addField = () => {
+    setFormData({...formData, fields: [...formData.fields, {...EMPTY_FIELD, id: fieldIdCounter}]});
+    const newId=fieldIdCounter+1;
+    setFieldIdCounter(newId);
+  }
+
   const EMPTY_FIELD = EMPTY_FORM.fields[0];
-  
+
   return (
     <Modal animation={false} {...props} size="lg" centered>
       <Modal.Header closeButton>
@@ -65,7 +73,7 @@ function CreateFormModal(props) {
           </Form.Group>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Button onClick={() => setFormData({...formData, fields: [...formData.fields, {...EMPTY_FIELD, id: formData.fields.length}]})}>
+            <Button onClick={addField}>
               Alan Ekle
             </Button>
           </div>
