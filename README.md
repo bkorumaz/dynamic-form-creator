@@ -4,6 +4,7 @@
 Live version can be found in the link above
 
 
+## Running on local
 You can run the project calling these commands in the project directory
 
 ### `npm install`
