@@ -1,6 +1,6 @@
 ## Live
 
-### bkorumaz.github.io/evam-interview-project/
+### https://bkorumaz.github.io/evam-interview-project/
 Live version can be found in the link above
 
 
