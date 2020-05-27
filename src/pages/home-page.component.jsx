@@ -10,8 +10,6 @@ function HomePage() {
   const [modalShow, setModalShow] = React.useState(false);
   const [searchField, setSearchField] = useState("");
   
-
-  console.log("home page rendered")
   const handleChange = (input) => {
     setSearchField(input.target.value);
   };
@@ -26,19 +24,12 @@ function HomePage() {
               <div className="card-header">
                 <div className="d-flex">
                   <h4 className="mr-auto p-2">Formlar</h4>
-                  <SearchBox
-                    placeholder="Ara"
-                    handleChange={handleChange}
-                    className="p-2"
-                  />
+                  <SearchBox placeholder="Ara" handleChange={handleChange} className="p-2"/>
                 </div>
               </div>
               <FormList searchField={searchField} />
               <div className="card-footer">
-                <Button
-                  variant="btn btn-primary"
-                  onClick={() => setModalShow(true)}
-                >
+                <Button variant="btn btn-primary" onClick={() => setModalShow(true)} >
                   Yeni Form Oluştur
                 </Button>
               </div>

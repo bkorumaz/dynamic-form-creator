@@ -1,4 +1,4 @@
-import { FORM_DATA } from "../data/forms";
+import { FORM_DATA } from "../data/forms.data";
 import { FormListActions } from "./form.actions";
 
 export const formReducer = (state = FORM_DATA, action) => {

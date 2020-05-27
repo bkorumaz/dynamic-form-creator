@@ -17,7 +17,7 @@ function FormList({ searchField, history }) {
         <ListGroup.Item
           key={form.name}
           action
-          onClick={() => history.push(`/form/${encodeURI(form.name.toLowerCase())}`)}
+          onClick={() => history.push(`/forms/${encodeURI(form.name.toLowerCase())}`)}
         >
           {form.name}
         </ListGroup.Item>
