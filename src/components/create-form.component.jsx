@@ -32,8 +32,8 @@ function CreateFormModal(props) {
     setFormData({...formData, fields: fields});
   };
 
-const emptyField = EMPTY_FORM.fields[0];
-
+  const EMPTY_FIELD = EMPTY_FORM.fields[0];
+  console.log(formData.fields)
   return (
     <Modal animation={false} {...props} size="lg" centered>
       <Modal.Header closeButton>
@@ -60,12 +60,12 @@ const emptyField = EMPTY_FORM.fields[0];
                 <span>Hiç Alan Oluşturmadın</span>
               </div>
             ) : (
-              formData.fields.map((field) => (<FormField fieldData={field} onDelete={handleDeleteField} handleChange={handleFieldChange}/>))
+              formData.fields.map((field) => (<FormField key={field.id} fieldData={field} onDelete={handleDeleteField} handleChange={handleFieldChange}/>))
             )}
           </Form.Group>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <Button onClick={() => setFormData({...formData, fields: [...formData.fields, {...EMPTY_FORM.fields[0], id: EMPTY_FORM.fields.length}]})}>
+            <Button onClick={() => setFormData({...formData, fields: [...formData.fields, {...EMPTY_FIELD, id: formData.fields.length}]})}>
               Alan Ekle
             </Button>
           </div>

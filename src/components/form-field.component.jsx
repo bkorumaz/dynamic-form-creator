@@ -10,7 +10,7 @@ const FormField = ({ fieldData, onDelete, handleChange }) => {
         <InputGroup.Append>
           <InputGroup.Text>
             <div key={`inline-checkbox`}>
-              <Form.Check label="Zorunlu" inline defaultChecked={fieldData.required} type="checkbox"
+              <Form.Check label="Zorunlu" inline checked={fieldData.required} type="checkbox"
                 onChange={(event) => handleChange({ ...fieldData, required: !fieldData.required })}/>
             </div>
           </InputGroup.Text>
