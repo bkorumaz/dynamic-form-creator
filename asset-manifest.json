@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/evam-interview-project/static/css/main.a86ccfc2.chunk.css",
-    "main.js": "/evam-interview-project/static/js/main.dc06be68.chunk.js",
-    "main.js.map": "/evam-interview-project/static/js/main.dc06be68.chunk.js.map",
+    "main.js": "/evam-interview-project/static/js/main.69bb4473.chunk.js",
+    "main.js.map": "/evam-interview-project/static/js/main.69bb4473.chunk.js.map",
     "runtime-main.js": "/evam-interview-project/static/js/runtime-main.40d68a03.js",
     "runtime-main.js.map": "/evam-interview-project/static/js/runtime-main.40d68a03.js.map",
-    "static/js/2.fbcae5c1.chunk.js": "/evam-interview-project/static/js/2.fbcae5c1.chunk.js",
-    "static/js/2.fbcae5c1.chunk.js.map": "/evam-interview-project/static/js/2.fbcae5c1.chunk.js.map",
+    "static/js/2.f2f01c3a.chunk.js": "/evam-interview-project/static/js/2.f2f01c3a.chunk.js",
+    "static/js/2.f2f01c3a.chunk.js.map": "/evam-interview-project/static/js/2.f2f01c3a.chunk.js.map",
     "index.html": "/evam-interview-project/index.html",
-    "precache-manifest.c86fdd9a19a4db605b3183b865d8144e.js": "/evam-interview-project/precache-manifest.c86fdd9a19a4db605b3183b865d8144e.js",
+    "precache-manifest.095c4bf543ca6f09230295583bd352b3.js": "/evam-interview-project/precache-manifest.095c4bf543ca6f09230295583bd352b3.js",
     "service-worker.js": "/evam-interview-project/service-worker.js",
     "static/css/main.a86ccfc2.chunk.css.map": "/evam-interview-project/static/css/main.a86ccfc2.chunk.css.map",
-    "static/js/2.fbcae5c1.chunk.js.LICENSE.txt": "/evam-interview-project/static/js/2.fbcae5c1.chunk.js.LICENSE.txt"
+    "static/js/2.f2f01c3a.chunk.js.LICENSE.txt": "/evam-interview-project/static/js/2.f2f01c3a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.40d68a03.js",
-    "static/js/2.fbcae5c1.chunk.js",
+    "static/js/2.f2f01c3a.chunk.js",
     "static/css/main.a86ccfc2.chunk.css",
-    "static/js/main.dc06be68.chunk.js"
+    "static/js/main.69bb4473.chunk.js"
   ]
 }
