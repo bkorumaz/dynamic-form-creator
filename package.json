@@ -1,6 +1,6 @@
 {
-  "homepage ": "http://bkorumaz.github.io/evam-interview-project",
   "name": "evam-interview-project",
+  "homepage": "https://bkorumaz.github.io/evam-interview-project/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

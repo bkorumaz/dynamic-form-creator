@@ -8,7 +8,6 @@ const FormInstance = ({ match }) => {
   const selectedForm = forms.formList.filter(
     (form) => form.name.toLowerCase() === match.params.formId
   )[0];
-  console.log(selectedForm);
 
   return (
     <Container fluid>

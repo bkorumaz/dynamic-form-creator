@@ -33,7 +33,7 @@ function CreateFormModal(props) {
   };
 
   const EMPTY_FIELD = EMPTY_FORM.fields[0];
-  console.log(formData.fields)
+  
   return (
     <Modal animation={false} {...props} size="lg" centered>
       <Modal.Header closeButton>
