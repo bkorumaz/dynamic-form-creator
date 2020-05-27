@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/evam-interview-project/precache-manifest.c86fdd9a19a4db605b3183b865d8144e.js"
+  "/evam-interview-project/precache-manifest.329bf68e6d35f87eeaa63636bf7d9a1e.js"
 );
 
 self.addEventListener('message', (event) => {

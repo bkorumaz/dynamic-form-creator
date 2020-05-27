@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e0bfbd4fbe73b203720c11df32a5339",
+    "revision": "a413d888bed1b8bb81abaeb08d3a4094",
     "url": "/evam-interview-project/index.html"
   },
   {
-    "revision": "c0fd7d463d2e7f45d477",
+    "revision": "771a4d7138e5d34fc06c",
     "url": "/evam-interview-project/static/css/main.a86ccfc2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/evam-interview-project/static/js/2.fbcae5c1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c0fd7d463d2e7f45d477",
-    "url": "/evam-interview-project/static/js/main.dc06be68.chunk.js"
+    "revision": "771a4d7138e5d34fc06c",
+    "url": "/evam-interview-project/static/js/main.4e537741.chunk.js"
   },
   {
     "revision": "b275fab581b97b400642",
