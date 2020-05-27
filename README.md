@@ -1,7 +1,6 @@
 ## Live
 
 ### https://bkorumaz.github.io/evam-interview-project/
-Live version can be found in the link above
 
 
 ## Running on local
